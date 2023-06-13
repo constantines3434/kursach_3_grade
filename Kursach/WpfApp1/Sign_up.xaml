@@ -1,0 +1,85 @@
+﻿<Page x:Class="WpfApp1.Sign_up"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1200"
+      Title="Sign_up">
+    <Grid Background="#FFD3D3D3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                    Height="70" Width="680"
+                    FontSize="40" FontFamily="Verdana" FontWeight="Bold" x:Name="Header">
+            Регистрация пользователя
+        </TextBlock>
+        <TextBlock  Grid.Row="1" Grid.Column="0"
+                    Height="70" Width="350"
+                    FontSize="30" FontFamily="Verdana" FontWeight="Bold" x:Name="role">
+            Роль:
+        </TextBlock>
+        <TextBlock  Grid.Row="2" Grid.Column="0"
+                    Height="70" Width="350"
+                    FontSize="30" FontFamily="Verdana" FontWeight="Bold" x:Name="login">
+            Логин:
+        </TextBlock>
+        <TextBlock  Grid.Row="3" Grid.Column="0"
+                    Height="70" Width="350"
+                    FontSize="30" FontFamily="Verdana" FontWeight="Bold" x:Name="password">
+            Пароль:
+        </TextBlock>
+        <ComboBox Name="Role"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Height="70" Width="400"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Top" Margin="0,41,0,0" />
+        <TextBox Grid.Row="2" Grid.Column="1"
+                 Height="70" Width="400"
+                 MaxLength="50"
+                 TextWrapping="Wrap"
+                 x:Name="textBox_login" Margin="100,41,100,29">
+        </TextBox>
+        <PasswordBox Grid.Row="3" Grid.Column="1"
+                     Height="70" Width="400"
+                     x:Name="textBox_password" Margin="100,40,100,30"
+                     MaxLength="50">
+        </PasswordBox>
+        <Button Grid.Row="4" Grid.Column="0" Width="400"
+                FontSize="30" FontFamily="Verdana" FontWeight="Bold"
+                x:Name="But2"
+                Content="Регистрация"   
+            Click="But_registration" Margin="0,10,0,16">
+            <Button.Background>
+                <SolidColorBrush Color="#FFFA8072" />
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="4" Grid.Column="1" Width="400"
+                FontSize="30" FontFamily="Verdana" FontWeight="Bold"
+                x:Name="But1"
+                Content="Авторизация"
+              Click="But_authorization" Margin="0,10,0,16">
+            <Button.Background>
+                <SolidColorBrush Color="#FF87CEFA" />
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

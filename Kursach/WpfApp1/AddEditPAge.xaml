@@ -1,0 +1,184 @@
+﻿<Page x:Class="WpfApp1.AddEditPAge"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditPAge" >
+
+    <Grid  x:Name="AddEditPage_user" Background="#FFD3D3D3">
+        <Grid.RowDefinitions >
+            <RowDefinition>
+
+            </RowDefinition>
+
+            <RowDefinition>
+
+            </RowDefinition>
+
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock  Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Height="70"
+                    Width="400"
+                    HorizontalAlignment="Left"
+                    FontSize="25"
+                    FontFamily="Verdana"
+                    FontWeight="Bold"
+                    x:Name="edit_header"
+                    VerticalAlignment="Center">
+            Добавление вопросов
+        </TextBlock>
+
+        <TextBlock  Grid.Row="1"
+                    Grid.Column="0"
+                    Height="30"
+                    Width="120"
+                    FontSize="14"
+                    FontFamily="Verdana"
+                    FontWeight="Bold"
+                    x:Name="disca_header"
+                    VerticalAlignment="Center">
+            Дисциплина:
+        </TextBlock>
+
+        <TextBlock  Grid.Row="2"
+                    Grid.Column="0"
+                    Height="30"
+                    Width="80"
+                    FontSize="14"
+                    FontFamily="Verdana"
+                    FontWeight="Bold"
+                    x:Name="quest_header"
+                    VerticalAlignment="Center">
+            Вопрос:
+        </TextBlock>
+
+        <TextBlock  Grid.Row="3"
+                    Grid.Column="0"
+                    Height="30"
+                    Width="120"
+                    FontSize="14"
+                    FontFamily="Verdana"
+                    FontWeight="Bold"
+                    x:Name="type_question_header"
+                    VerticalAlignment="Center">
+            Тип вопроса:
+        </TextBlock>
+
+        <TextBlock  Grid.Row="4"
+                    Grid.Column="0"
+                    Height="30"
+                    Width="120"
+                    FontSize="14"
+                    FontFamily="Verdana"
+                    FontWeight="Bold"
+                    TextWrapping="Wrap"
+                    x:Name="complexity_header"
+                    VerticalAlignment="Center">
+            Сложность вопроса:
+        </TextBlock>
+
+
+        <ComboBox x:Name="Disca"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  SelectedItem="0"
+                  Height="70"
+                  Width="600"
+                  Background="White"  Grid.RowSpan="2">
+        </ComboBox>
+
+        <TextBox x:Name="question_textbox"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Height="70"
+                 Width="600"
+                 TextWrapping="Wrap" 
+                 MaxLength="500" 
+                 Background="White" />
+
+        <ComboBox x:Name="Type_question"
+                  Grid.Row="3"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Height="70"
+                  Width="600"
+                  SelectedIndex="0"
+                  Background="White">
+
+            <TextBlock>Теоретический</TextBlock>
+            <TextBlock>Практический</TextBlock>
+        </ComboBox>
+
+        <ComboBox x:Name="Complexity_question"
+                  Grid.Row="4"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="2"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Height="70"
+                  Width="600"
+                  SelectedIndex="0"
+                  Background="White">
+
+            <TextBlock>Сложный</TextBlock>
+            <TextBlock>Средний</TextBlock>
+            <TextBlock>Простой</TextBlock>
+        </ComboBox>
+
+
+        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                Height="70" Width="250"
+                 FontSize="12" FontFamily="Verdana" FontWeight="Bold"
+                x:Name="But_Save_Question"
+                Content="Сохранение"
+                 
+            Click="But_Click_Save_Question" Margin="120,3,230,2">
+            <Button.Background>
+                <SolidColorBrush Color="#FF87CEFA" />
+            </Button.Background>
+        </Button>
+
+        <Button Grid.Row="5" Grid.Column="0"
+                Height="70" Width="200"
+                FontSize="12" FontFamily="Verdana" FontWeight="Bold"
+                x:Name="But_viewing"
+                Content="Просмотр базы данных"
+                 
+            Click="But_Click_Viewing_Table_Data">
+            <Button.Background>
+                <SolidColorBrush Color="#FFFA8072" />
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>
